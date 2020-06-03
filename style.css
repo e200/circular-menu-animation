@@ -23,6 +23,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       background: orange;
       border: none;
       border-radius: 50%;
+      outline: none;
       transition: .7s;
       z-index: 999;
     }
