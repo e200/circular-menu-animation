@@ -1,0 +1,95 @@
+html, body { margin: 0; padding: 0; height: 100%; }
+
+    body { font-family: 'Roboto', sans-serif; }
+
+    .main {
+      position: relative;
+      height: 100%;
+      background: purple;
+      overflow: hidden;
+    }
+
+    .menu {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 1.25em;
+      background: orange;
+      border: none;
+      border-radius: 50%;
+      transition: .7s;
+      z-index: 999;
+    }
+
+    .menu-line {
+      position: relative;
+      width: 18px;
+      height: 2px;
+      background: black;
+      opacity: 1;
+      transition: .7s;
+    }
+
+    .menu-line::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 18px;
+      height: 2px;
+      background: inherit;
+      transform: translateX(-50%);
+      transition: .7s;
+    }
+
+    .menu-line::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 18px;
+      height: 2px;
+      background: inherit;
+      transform: translateX(-50%);
+      transition: .7s;
+    }
+
+    .menu:active {
+      background: purple;
+    }
+
+    .menu:active .menu-line {
+      background: rgba(0,0,0,0);
+    }
+
+    .menu:active .menu-line::before {
+      transform: translateX(-50%) translateY(5px) rotate(45deg);
+      background: white;
+    }
+
+    .menu:active .menu-line::after {
+      transform: translateX(-50%) translateY(-5px) rotate(-45deg);
+      background: white;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      background: orange;
+      transform: scale(0);
+      border-radius: 100%;
+      transition: .7s;
+    }
+
+    .menu:active + .overlay {
+      transform: scale(85);
+    }
