@@ -23,7 +23,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       background: orange;
       border: none;
       border-radius: 50%;
-      transition: .7s;
+      transition: .3s;
       z-index: 999;
     }
 
@@ -33,7 +33,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       height: 2px;
       background: black;
       opacity: 1;
-      transition: .7s;
+      transition: .3s;
     }
 
     .menu-line::before {
@@ -45,7 +45,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       height: 2px;
       background: inherit;
       transform: translateX(-50%);
-      transition: .7s;
+      transition: .3s;
     }
 
     .menu-line::after {
@@ -57,7 +57,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       height: 2px;
       background: inherit;
       transform: translateX(-50%);
-      transition: .7s;
+      transition: .3s;
     }
 
     .menu:active {
@@ -88,7 +88,7 @@ html, body { margin: 0; padding: 0; height: 100%; }
       background: orange;
       transform: scale(0);
       border-radius: 100%;
-      transition: .7s;
+      transition: .3s;
     }
 
     .menu:active + .overlay {
